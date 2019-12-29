@@ -1,35 +1,35 @@
 class Translation(object):
-    START_TEXT = """Hi, *Welcome* To @All_nOne_Bot
+    START_TEXT = """ **Hi,** **Welcome** **To** @All_nOne_Bot
 
-/help to Know how to use me..!! 
+/help **to** **Know** **how** **to** **use** **me..!!**
 
-My credits to : @Amal_PM
+**My** **Credits** **to** : @Amal_PM
 
- For More Better Use 
+ **For** **More** **Better** **Use**
 
  @AnyDLBot
 
-👉 Upload Files To Telegram
+**👉** Upload Files To Telegram
 
-👉Generate Links To Telegram
+**👉** Generate Links To Telegram
 
-👉 For Rename To Use /rename
+**👉** For Rename To Use /rename
 
-🔷 Just Send Me A File Or Direct Link.. 😎"""
+**🔷** **Just** **Send** **Me** **A** **File** **Or** **Direct** **Link..😎** """
 
 
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
-    UPGRADE_TEXT = "This is free service and there is no current Plans 😜"
+    UPGRADE_TEXT = " **This** **is** **free** **service** **and** **there** **is** **no** **Current** **Plans** **😜**"
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-    DOWNLOAD_START = "Trying to Download..📥"
-    UPLOAD_START = "Trying to Upload..📤"
+    DOWNLOAD_START = "**Trying** **to** **Download..📥**"
+    UPLOAD_START = "**Trying** **to** **Upload..📤**"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "Thank you for using me..!!"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "**Thank** **you** **for** **Using** **me..!!**"
     
     
 
