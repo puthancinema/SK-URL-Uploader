@@ -1,9 +1,9 @@
 class Translation(object):
-    START_TEXT = """ **Hi,** **Welcome** **To** @All_nOne_Bot
+    START_TEXT = """ **Hi,** **{}** **Welcome** **To** **@All_nOne_Bot**
 
-/help **to** **Know** **how** **to** **use** **me..!!**
+**/help** **to** **Know** **how** **to** **use** **me..!!**
 
-**My** **Credits** **to** : @Amal_PM
+**My** **Credits** **to** **:** **@Amal_PM**
 
  **For** **More** **Better** **Use**
 
@@ -13,7 +13,7 @@ class Translation(object):
 
 **👉** Generate Links To Telegram
 
-**👉** For Rename To Use /rename
+**👉** For Rename To Use **/rename**
 
 **🔷** **Just** **Send** **Me** **A** **File** **Or** **Direct** **Link..😎** """
 
@@ -36,7 +36,7 @@ URL | filename | username | password"""
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nPlease rate me if you find me useful. https://t.me/tlgrmcbot?start=anydl_bot-bot \nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription.\nIf you think this is a bug, please contact <a href='https://telegram.dog/ThankTelegram'>@SpEcHlDe</a>"
-    SAVED_CUSTOM_THUMB_NAIL = "**Custom** **video** **/** **file** **thumbnail** **saved**. **This** **image** **will** **be** **used** **in** *the* **video** **/** **file**."
+    SAVED_CUSTOM_THUMB_NAIL = "**Custom** **video** **/** **file** **thumbnail** **saved**. **This** **image** **will** **be** **used** **in** **the** **video** **/** **file**."
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
