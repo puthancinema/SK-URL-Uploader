@@ -74,6 +74,8 @@ async def rename_doc(bot, update):
                     text=Translation.RENAME_403_ERR,
                     chat_id=update.chat.id,
                     message_id=a.message_id
+                (
+                return  
             new_file_name = download_location + file_name
             os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
