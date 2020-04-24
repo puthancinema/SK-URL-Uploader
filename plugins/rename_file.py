@@ -40,10 +40,7 @@ async def rename_doc(bot, update):
             message_ids=update.message_id,
             revoke=True
         )
-        return
-    TRChatBase(update.from_user.id, update.text, "rename")
-    
-                return
+
             new_file_name = download_location + file_name
             os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
