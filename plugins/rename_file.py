@@ -120,7 +120,7 @@ async def rename_doc(bot, update):
                 )
             )
             try:
-                )
+                huujj
                 os.remove(thumb_image_path)
             except:
                 pass
