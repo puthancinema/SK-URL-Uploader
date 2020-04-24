@@ -41,6 +41,39 @@ async def rename_doc(bot, update):
             revoke=True
 
         )
+        return
+    TRChatBase(update.from_user.id, update.text, "rename")
+    if (" " in update.text) and (update.reply_to_message is not None):
+        cmd, file_name = update.text.split(" ", 1)
+        description = Translation.CUSTOM_CAPTION_UL_FILE
+        download_location = Config.DOWNLOAD_LOCATION + "/"
+        a = await bot.send_message(
+            chat_id=update.chat.id,
+            text=Translation.DOWNLOAD_START,
+            reply_to_message_id=update.message_id
+        )
+        c_time = time.time()
+        the_real_download_location = await bot.download_media(
+            message=update.reply_to_message,
+            file_name=download_location,
+            progress=progress_for_pyrogram,
+            progress_args=(
+                Translation.DOWNLOAD_START,
+                a,
+                c_time
+            )
+        )
+        if the_real_download_location is not None:
+            await bot.edit_message_text(
+                text=Translation.SAVED_RECVD_DOC_FILE,
+                chat_id=update.chat.id,
+                message_id=a.message_id
+            )
+            if "IndianMovie" in the_real_download_location:
+                await bot.edit_message_text(
+                    text=Translation.RENAME_403_ERR,
+                    chat_id=update.chat.id,
+                    message_id=a.message_id
             new_file_name = download_location + file_name
             os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
