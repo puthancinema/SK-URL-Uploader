@@ -76,7 +76,7 @@ async def rename_doc(bot, update):
                 )
                 return
             
-
+            os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
