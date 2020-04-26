@@ -119,8 +119,7 @@ async def rename_doc(bot, update):
                     c_time
                 )
             )
-            try:
-                os.remove(new_file_name)
+            try:        
                 os.remove(thumb_image_path)
             except:
                 pass
