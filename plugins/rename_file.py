@@ -111,7 +111,7 @@ async def rename_doc(bot, update):
                 thumb=thumb_image_path,
                 caption=description,
                 # reply_markup=reply_markup,
-                reply_to_message_id=update.reply_to_message.message_id,
+                reply_to_message_id=reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
