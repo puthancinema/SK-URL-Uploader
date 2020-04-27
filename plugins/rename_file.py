@@ -64,7 +64,7 @@ async def rename_doc(bot, update):
         )
         if the_real_download_location is not None:
             await bot.edit_message_text(
-                text=Translation.Translation.SAVED_RECVD_DOC_FILE,
+                text=Translation.SAVED_RECVD_DOC_FILE,
                 chat_id=update.chat.id,
                 message_id=a.message_id
             )
@@ -111,7 +111,7 @@ async def rename_doc(bot, update):
                 thumb=thumb_image_path,
                 caption=description,
                 # reply_markup=reply_markup,
-                reply_to_message_id=reply_to_message.message_id,
+                reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
