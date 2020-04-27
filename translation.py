@@ -1,5 +1,5 @@
 class Translation(object):
-    START_TEXT = """ **Hi,** **Welcome** **To** **@All_nOne_Bot**
+    START_TEXT = """ **Hi,** **Welcome** **To** **@DLRename_Bot**
 
 **/help** **to** **Know** **how** **to** **use** **me..!!**
 
@@ -40,7 +40,7 @@ URL | filename | username | password"""
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
-    CUSTOM_CAPTION_UL_FILE = " "
+    CUSTOM_CAPTION_UL_FILE = "**Renamed** **by** **@DLRename_Bot** "
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
     NO_VOID_FORMAT_FOUND = "no-one gonna help you\n<b>YouTubeDL</b> said: {}"
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
