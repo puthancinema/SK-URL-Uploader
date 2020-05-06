@@ -34,13 +34,6 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
-            chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=false
-        )
-        return
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
@@ -57,9 +50,7 @@ async def rename_doc(bot, update):
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
-                Translation.DOWNLOAD_START,
-                a,
-                c_time
+                Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time
             )
         )
         if the_real_download_location is not None:
@@ -114,9 +105,7 @@ async def rename_doc(bot, update):
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
-                    Translation.UPLOAD_START,
-                    a, 
-                    c_time
+                    Translation.UPLOAD_START, a.message_id, update.chat.id, c_time
                 )
             )
             try:
