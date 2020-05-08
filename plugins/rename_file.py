@@ -33,7 +33,7 @@ from PIL import Image
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
-def rename_doc(bot, update):
+async def rename_doc(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
@@ -41,11 +41,11 @@ def rename_doc(bot, update):
             revoke=True
         )
         return
+    TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         description = Translation.CUSTOM_CAPTION_UL_FILE
-        download_location = Config.DOWNLOAD_LOCATION + \
-            "/" + str(update.from_user.id) + str(update.from_user.id) +  "/"
+        download_location = Config.DOWNLOAD_LOCATION + "/"
         a = await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
@@ -76,8 +76,7 @@ def rename_doc(bot, update):
                 )
                 return
             new_file_name = download_location + file_name
-            os.rename(the_real_download_location, 
-                      new_file_name)
+            os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
