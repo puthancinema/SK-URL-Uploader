@@ -35,23 +35,24 @@ from PIL import Image
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
-        bot.delete_messages(
+        await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
             revoke=True
         )
         return
+    TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
-        a = awit bot.send_message(
+        a = await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
             reply_to_message_id=update.message_id
         )
         c_time = time.time()
-        the_real_download_location = bot.download_media(
+        the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             file_name=download_location,
             progress=progress_for_pyrogram,
@@ -62,13 +63,13 @@ async def rename_doc(bot, update):
             )
         )
         if the_real_download_location is not None:
-            bot.edit_message_text(
+            await bot.edit_message_text(
                 text=Translation.SAVED_RECVD_DOC_FILE,
                 chat_id=update.chat.id,
                 message_id=a.message_id
             )
             if "IndianMovie" in the_real_download_location:
-                bot.edit_message_text(
+                await bot.edit_message_text(
                     text=Translation.RENAME_403_ERR,
                     chat_id=update.chat.id,
                     message_id=a.message_id
