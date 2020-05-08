@@ -35,7 +35,7 @@ from PIL import Image
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+        bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
             revoke=True
@@ -45,7 +45,7 @@ async def rename_doc(bot, update):
         cmd, file_name = update.text.split(" ", 1)
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
-        a = await bot.send_message(
+        a = bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
             reply_to_message_id=update.message_id
@@ -68,7 +68,7 @@ async def rename_doc(bot, update):
                 message_id=a.message_id
             )
             if "IndianMovie" in the_real_download_location:
-                await bot.edit_message_text(
+                bot.edit_message_text(
                     text=Translation.RENAME_403_ERR,
                     chat_id=update.chat.id,
                     message_id=a.message_id
