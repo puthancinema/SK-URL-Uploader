@@ -56,7 +56,10 @@ async def rename_doc(bot, update):
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
-                Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time)
+                Translation.DOWNLOAD_START,
+                a,
+                c_time
+            )
         )
         if the_real_download_location is not None:
             await bot.edit_message_text(
