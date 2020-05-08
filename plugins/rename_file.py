@@ -62,7 +62,7 @@ async def rename_doc(bot, update):
             )
         )
         if the_real_download_location is not None:
-            await bot.edit_message_text(
+            bot.edit_message_text(
                 text=Translation.SAVED_RECVD_DOC_FILE,
                 chat_id=update.chat.id,
                 message_id=a.message_id
