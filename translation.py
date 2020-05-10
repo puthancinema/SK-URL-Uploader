@@ -1,6 +1,7 @@
 class Translation(object):
-    START_TEXT = """Hello,
-Please send me any direct download URL Link, i can upload to telegram as File/Video"""
+    START_TEXT = """/help to know how to use me
+👉 I Can Upload Files To Telegram
+Just Send Me A File or Direct Link 😘"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "<b>👉  This is Free Service. No Upgrade Plans😊.. </b>  /start for Details"
