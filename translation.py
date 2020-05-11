@@ -1,5 +1,5 @@
 class Translation(object):
-    START_TEXT = """ **Hi,** **Welcome** **To** **@DLRename_Bot**
+    START_TEXT = """ **Hi,** **Welcome**🙄 **To** **@DLRename_Bot**
 
 **/help** **to** **Know** **how** **to** **use** **me..!!**
 
