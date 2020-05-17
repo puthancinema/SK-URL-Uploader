@@ -9,8 +9,7 @@ Just Send Me A File or Direct Link 😘... /upgrade 🥺"""
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-    DOWNLOAD_START = "Downloading to My Server 📥.
-Please wait.Uploading will start Soon.😴"
+    DOWNLOAD_START = "**Checking Link.. Uploading Soon..**"
     UPLOAD_START = "**Uploading**"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
