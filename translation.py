@@ -9,7 +9,7 @@ Just Send Me A File or Direct Link 😘... /upgrade 🥺"""
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-    DOWNLOAD_START = "**Checking Link.. Uploading Soon..**"
+    DOWNLOAD_START = "**Downloading..**"
     UPLOAD_START = "**Uploading**"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
@@ -30,7 +30,7 @@ URL | filename | username | password"""
 Telegram ID: <code>{}</code>
 Plan name: Free Cloned User
 Expires on: 31/12/2020"""
-    HELP_USER = """**Just send a direct download url** !"""
+    HELP_USER = """നിനക്ക് തോന്നുന്നത് പോലേ use ചെയ്യ് But Rename ചെയ്യാനും Url Link വെച്ച് File Upload ചെയ്യാൻ മാത്രമേ എനിക്ക് കയ്യൂ😏 @SF_Movies !"""
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
     REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
     REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
